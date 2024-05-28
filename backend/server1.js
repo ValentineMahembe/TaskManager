@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB Connection
-const db = process.env.MONGO_URI || require('./config/db');
+const db = require('./config/db');
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log(err));
@@ -24,7 +24,7 @@ app.use('/api/tasks', require('./routes/tasks'));
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
     // Set static folder
-    app.use(express.static(path.join(__dirname, '../frontend', 'build')));
+    app.use(express.static('../frontend/build'));
 
     app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));

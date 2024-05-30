@@ -1,0 +1,32 @@
+.task-list {
+    padding: 20px;
+  }
+  
+  .task-manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .task-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .task-list li {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+  }

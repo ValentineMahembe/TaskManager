@@ -1,0 +1,43 @@
+/* src/components/Login.css */
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .login-container .error {
+    color: red;
+  }
+  
+  .login-container div {
+    margin-bottom: 1rem;
+  }
+  
+  .login-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .login-container input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .login-container button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }  

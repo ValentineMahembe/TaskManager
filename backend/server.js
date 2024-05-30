@@ -10,6 +10,15 @@ require('dotenv').config();
 app.use(bodyParser.json());
 app.use(cors());
 
+// Error handling middleware
+app.use((err, req, res, next) => {
+    if (err instanceof SyntaxError && err.status === 400 && 'body' in err) {
+        console.error('Bad JSON');
+        return res.status(400).send({ status: 400, message: 'Bad JSON' }); // Bad JSON
+    }
+    next();
+});
+
 // MongoDB Connection
 const db = process.env.MONGO_URI || require('./config/db');
 mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -18,7 +27,7 @@ mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
 
 // Routes
 app.use('/api/users', require('./routes/users'));
-app.use('/api/auth', require('./middleware/auth'));
+app.use('/api/auth', require('./routes/auth'));
 app.use('/api/tasks', require('./routes/tasks'));
 
 // Serve static assets in production

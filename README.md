@@ -1,4 +1,3 @@
-This is the README of the TaskManager project
 # TaskManager Web Application
 
 ## Description

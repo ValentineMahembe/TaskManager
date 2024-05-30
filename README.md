@@ -13,7 +13,7 @@ TaskManager is a web application that allows users to manage their tasks. Users 
 - MongoDB
 - Mongoose
 - JWT (JSON Web Tokens)
-- bcrypt.js
+- React.js
 
 ## Installation
 

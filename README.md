@@ -19,6 +19,6 @@ TaskManager is a web application that allows users to manage their tasks. Users 
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/TaskManager.git
+   git clone https://github.com/ValentineMahembe/TaskManager.git
    cd TaskManager
 
